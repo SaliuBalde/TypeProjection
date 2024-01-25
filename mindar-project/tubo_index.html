@@ -94,7 +94,8 @@
         .fuoco,
         .ascensore,
         .quinto,
-        .about {
+        .about,
+        .back {
             font-size: 30px; /* Set the desired font size */
             transition: color 0.3s ease-out; /* Add a transition effect for color change */
         }
@@ -120,7 +121,8 @@
 
         .ascensore,
         .quinto,
-        .about {
+        .about,
+        .back {
             font-family: 'ABCMaxiPlusVariable-Trial', sans-serif;
             animation: tuboFuocoAscensoreAnimation 2s infinite alternate ease-in-out; /* Add animation to the fourth and fifth buttons */
         }
@@ -130,7 +132,8 @@
             animation: quintoAnimation 2s infinite alternate ease-in-out; /* Add animation to the "Ginto" button */
         }
 
-        .about {
+        .about,
+        .back {
             font-family: 'ABCMarist-Black-Trial', sans-serif;
             font-size: 20px; /* Set a smaller font size for the "About" button */
         }
@@ -191,7 +194,8 @@
         .fuoco:hover,
         .ascensore:hover,
         .quinto:hover,
-        .about:hover {
+        .about:hover,
+        .back:hover {
             color: white; /* Change text color to white on hover */
         }
     </style>
@@ -216,8 +220,13 @@
                         lines[index].style.opacity = 1;
                         // Add a click event listener to redirect to the specified URL
                         if (button.tagName === 'A') {
-                            button.addEventListener('click', function () {
-                                window.location.href = button.getAttribute('href');
+                            button.addEventListener('click', function (event) {
+                                event.preventDefault(); // Prevent the default behavior of the link
+                                if (button.classList.contains('back')) {
+                                    history.back();
+                                } else {
+                                    window.location.href = button.getAttribute('href');
+                                }
                             });
                         }
                     });
@@ -262,29 +271,26 @@
         <div class="button-container">
             <!-- Horizontal line above the first button -->
             <div class="line-above"></div>
-
-            <!-- Buttons and lines (hidden initially) -->
-            <a href="tubo_gravity.html" class="colonna">[1] Gravity</a>
-            <hr>
-            <a href="tubo_maxi.html" class="ascensore">[2] Maxi</a>
-            <hr>
-            <a href="tubo_arizona.html" class="tubo">[3] Arizona</a>
-            <hr>
-            <a href="tubo_asphalt.html" class="fuoco">[4] Asphalt</a>
-            <hr>
-           
-            <a href="tubo_ginto.html" class="quinto">[5] Ginto</a>
-
-            <!-- Horizontal line above the "About" button (under the "Ginto" button) -->
-            <div class="line-above"></div>
-
-            <!-- "About" button -->
-            <a href="about.html" class="about">[About]</a>
-
-            <!-- Horizontal line below the last button -->
-            <div class="line-below"></div>
-        </div>
-    </div>
-</body>
-
-</html>
+                        <!-- Buttons and lines (hidden initially) -->
+                        <a href="tubo_gravity.html" class="colonna">[1] Gravity</a>
+                        <hr>
+                        <a href="tubo_maxi.html" class="ascensore">[2] Maxi</a>
+                        <hr>
+                        <a href="tubo_arizona.html" class="tubo">[3] Arizona</a>
+                        <hr>
+                        <a href="tubo_asphalt.html" class="fuoco">[4] Asphalt</a>
+                        <hr>
+                        <a href="tubo_ginto.html" class="quinto">[5] Ginto</a>
+            
+                    
+                        <hr>
+                        <a href="index.html" class="back">[Back] </a>
+            
+                        <!-- Horizontal line above the "About" button (under the "Ginto" button) -->
+                        <a href="#" class="back">[BACK]</a>
+                    </div>
+                </div>
+            </body>
+            
+            </html>
+            
