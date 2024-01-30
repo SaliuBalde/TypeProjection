@@ -89,53 +89,50 @@
             z-index: 2; /* Set a higher z-index for the buttons */
         }
 
-        .colonna,
-        .tubo,
-        .fuoco,
-        .ascensore,
-        .quinto,
-        .about,
+        .gravity,
+        .arizona,
+        .asfalt,
+        .maxi,
+        .ginto,
         .back {
             font-size: 30px; /* Set the desired font size */
             transition: color 0.3s ease-out; /* Add a transition effect for color change */
         }
 
-        .colonna {
+        .gravity {
             font-family: 'ABCGravityVariable-Trial', sans-serif;
-            animation: colonnaAnimation 2s infinite alternate ease-in-out; /* Add animation to the "Gravity" button */
+            animation: gravityAnimation 2s infinite alternate ease-in-out; /* Add animation to the "Gravity" button */
         }
 
-        .tubo,
-        .fuoco,
-        .ascensore {
+        .arizona,
+        .asfalt,
+        .maxi {
             font-family: 'ABCArizonaPlusVariable-Trial', sans-serif;
-            animation: tuboFuocoAscensoreAnimation 2s infinite alternate ease-in-out; /* Add animation to the second, third, and fourth buttons */
+            animation: arizonaasfaltmaxiAnimation 2s infinite alternate ease-in-out; /* Add animation to the second, third, and fourth buttons */
         }
 
-        .fuoco,
-        .ascensore,
-        .quinto {
+        .asfalt,
+        .maxi,
+        .ginto {
             font-family: 'ABCAsfaltVariableVF-Trial', sans-serif;
-            animation: tuboFuocoAscensoreAnimation 2s infinite alternate ease-in-out; /* Add animation to the third, fourth, and fifth buttons */
+            animation: arizonaasfaltmaxiAnimation 2s infinite alternate ease-in-out; /* Add animation to the third, fourth, and fifth buttons */
         }
 
-        .ascensore,
-        .quinto,
-        .about,
+        .maxi,
+        .ginto,
         .back {
             font-family: 'ABCMaxiPlusVariable-Trial', sans-serif;
-            animation: tuboFuocoAscensoreAnimation 2s infinite alternate ease-in-out; /* Add animation to the fourth and fifth buttons */
+            animation: arizonaasfaltmaxiAnimation 2s infinite alternate ease-in-out; /* Add animation to the fourth and fifth buttons */
         }
 
-        .quinto {
+        .ginto {
             font-family: 'ABCGintoNordWidthsVariable-Trial', sans-serif;
-            animation: quintoAnimation 2s infinite alternate ease-in-out; /* Add animation to the "Ginto" button */
+            animation: gintoAnimation 2s infinite alternate ease-in-out; /* Add animation to the "Ginto" button */
         }
 
-        .about,
         .back {
             font-family: 'ABCMarist-Black-Trial', sans-serif;
-            font-size: 20px; /* Set a smaller font size for the "About" button */
+            font-size: 20px; 
         }
 
         a {
@@ -161,7 +158,7 @@
             opacity: 0;
         }
 
-        @keyframes colonnaAnimation {
+        @keyframes gravityAnimation {
             0% {
                 font-variation-settings: 'wdth' 150, 'slnt' -16;
             }
@@ -170,7 +167,7 @@
             }
         }
 
-        @keyframes tuboFuocoAscensoreAnimation {
+        @keyframes arizonaasfaltmaxiAnimation {
             0% {
                 font-variation-settings: 'wdth' 50, 'wght' 200, 'slnt' -14, 'SRFF' 0, 'MONO' 0;
             }
@@ -179,7 +176,7 @@
             }
         }
 
-        @keyframes quintoAnimation {
+        @keyframes gintoAnimation {
             0% {
                 font-variation-settings: 'wdth' 75, 'wght' 100, 'slnt' -12;
             }
@@ -189,12 +186,11 @@
         }
 
         /* Hover effect for buttons */
-        .colonna:hover,
-        .tubo:hover,
-        .fuoco:hover,
-        .ascensore:hover,
-        .quinto:hover,
-        .about:hover,
+        .gravity:hover,
+        .arizona:hover,
+        .asfalt:hover,
+        .maxi:hover,
+        .ginto:hover,
         .back:hover {
             color: white; /* Change text color to white on hover */
         }
@@ -272,22 +268,21 @@
             <!-- Horizontal line above the first button -->
             <div class="line-above"></div>
                         <!-- Buttons and lines (hidden initially) -->
-                        <a href="colonna_gravity.html" class="colonna">[1] Gravity</a>
+                        <a href="colonna_gravity.html" class="gravity">[1] Gravity</a>
                         <hr>
-                        <a href="colonna_maxi.html" class="ascensore">[2] Maxi</a>
+                        <a href="colonna_maxi.html" class="maxi">[2] Maxi</a>
                         <hr>
-                        <a href="colonna_arizona.html" class="tubo">[3] Arizona</a>
+                        <a href="colonna_arizona.html" class="arizona">[3] Arizona</a>
                         <hr>
-                        <a href="colonna_asfalt.html" class="fuoco">[4] Asfalt</a>
+                        <a href="colonna_asfalt.html" class="asfalt">[4] Asfalt</a>
                         <hr>
-                        <a href="colonna_ginto.html" class="quinto">[5] Ginto</a>
+                        <a href="colonna_ginto.html" class="ginto">[5] Ginto</a>
             
                     
                         <hr>
-                        <a href="index.html" class="back">[Back] </a>
+                        <a href="supsi.html" class="back">[Back] </a>
             
-                        <!-- Horizontal line above the "About" button (under the "Ginto" button) -->
-                        <a href="#" class="back">[BACK]</a>
+                        <a href="#" class="back">[Back]</a>
                     </div>
                 </div>
             </body>
